@@ -1,0 +1,1 @@
+double avg(double, double);
