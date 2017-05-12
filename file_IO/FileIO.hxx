@@ -3,7 +3,7 @@
 class user_data{
 public:
 	unsigned int id;
-    std::string name;
+    char name[20];
 	unsigned int high_score;
 	unsigned int element[4][4];
 	user_data(){

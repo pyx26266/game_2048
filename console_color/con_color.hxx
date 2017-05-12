@@ -17,9 +17,17 @@
 #define GAME_OVER 0
 #define GAME_WIN 1
 #define GAME_CONTINUE -1
-//For Formatting Game background
-#define BORDER "\t\t\t\t"<<(char)186
-#define PIPE <<(char)179<<
+const char H_BAR[] = "\u2550";
+const char V_BAR[] = "\u2551";
+const char L_UP[] = "\u2554";
+const char L_BOTTOM[] = "\u255A";
+const char R_UP[] = "\u2557";
+const char R_BOTTOM[] = "\u255D";
+const char T_DOWN[] = "\u2566";
+const char T_UP[] = "\u2569";
+const char T_LEFT[] = "\u2560";
+const char T_RIGHT[] = "\u2563";
+const char T_CENTER[] = "\u256C";
 
 enum Color : short int {
   red=1,
