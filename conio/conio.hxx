@@ -1,19 +1,19 @@
 #ifndef CON_COLOR_HXX
 #define CON_COLOR_HXX
 //Magical numbers to be used throughout the program execution to interact with USER.
-#define A 65
-#define Y 89
-#define y 121
-#define D 68
-#define W 87
-#define S 83
-#define ESC 27
-#define ZERO 48
-#define ONE 49
-#define TWO 50
-#define THREE 51
-#define FOUR 52
-#define FIVE 53
+#define KEY_A 65
+#define KEY_Y 89
+#define KEY_y 121
+#define KEY_D 68
+#define KEY_W 87
+#define KEY_S 83
+#define KEY_ESC 27
+#define KEY_ZERO 48
+#define KEY_ONE 49
+#define KEY_TWO 50
+#define KEY_THREE 51
+#define KEY_FOUR 52
+#define KEY_FIVE 53
 #define GAME_OVER 0
 #define GAME_WIN 1
 #define GAME_CONTINUE -1
@@ -41,16 +41,17 @@ enum Color : short int {
   gray=245,
   light_blue=62
 };
-class Formatter {
+class Conio {
  public:
-  Formatter(Color C);
+  Conio(Color C);
   
   void setCode(Color C);
-
-  friend std::ostream& operator<<(std::ostream& os, const Formatter &f);
+  static char getch();
+  static void clear();
+  friend std::ostream& operator<<(std::ostream& os, const Conio &f);
 
  private:
   Color code;
 };
-const Formatter defWhite(Color::white);
+const Conio defWhite(Color::white);
 #endif

@@ -2,7 +2,7 @@
 #define GAME_HXX
 #include <iostream>
 #include <fstream>
-#include <console_color/con_color.hxx>
+#include <conio/conio.hxx>
 #include <file_IO/FileIO.hxx>
 
 class game_2048: public file_IO {
@@ -16,7 +16,7 @@ public:
     void intro();
     void instructions();
     void draw_no(int, int);
-    void msgbox(const char ch[], int time = 1000 );
+    void msgbox(const char ch[], short time = 1 );
     void init(user_data &ud);
     void resetPlayer(user_data &u);
     void background();
