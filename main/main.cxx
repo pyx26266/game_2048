@@ -4,14 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "game.hxx"			// And this Ofcourse for the game itself
-char file_IO::DATA[20] = "file0101";
+char file_IO::GAME_DATA_[MAX_GAME_DATA_FILE_NAME] = "save_game.enc";
 
 using namespace std;
 int main() {
   bool back_menu(false),
-       game_over(false),
-       //Just to exclude generating random no. while invalid key is pressed or no movement encountered
-       process(true);
+      game_over(false),
+      //Just to exclude generating random no. while invalid key is pressed or no movement encountered
+      process(true);
 
   game_2048 game;
   //initconsole();
@@ -22,7 +22,7 @@ int main() {
     while (game_over == false) {
       Conio::clear();
       if (process == true)
-          game.heart();
+        game.heart();
       game.background();
       game.option = Conio::getch();
       game.option = toupper((char) game.option);

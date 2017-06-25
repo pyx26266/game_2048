@@ -1,5 +1,6 @@
 #ifndef CON_COLOR_HXX
 #define CON_COLOR_HXX
+
 //Magical numbers to be used throughout the program execution to interact with USER.
 #define KEY_A 65
 #define KEY_Y 89
@@ -41,6 +42,7 @@ enum Color : short int {
   gray=245,
   light_blue=62
 };
+
 class Conio {
  public:
   Conio(Color C);
@@ -54,4 +56,5 @@ class Conio {
   Color code;
 };
 const Conio defWhite(Color::white);
+
 #endif

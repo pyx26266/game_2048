@@ -13,15 +13,15 @@ std::ostream& operator<<(std::ostream& os, const Conio &f) {
 }
 
 void Conio::clear() {
-    std::cout << "\033[2J\033[1;1H";
+  std::cout << "\033[2J\033[1;1H" << std::flush;
 }
 
 char Conio::getch() {
-      char c; // This function should return the keystroke
-      system("stty raw");    // Raw input - wait for only a single keystroke
-      system("stty -echo");  // Echo off
-      std::cin >> c;
-      system("stty cooked"); // Cooked input - reset
-      system("stty echo");   // Echo on - Reset
-      return c;
+  char c; // This function should return the keystroke
+  system("stty raw");    // Raw input - wait for only a single keystroke
+  system("stty -echo");  // Echo off
+  std::cin >> c;
+  system("stty cooked"); // Cooked input - reset
+  system("stty echo");   // Echo on - Reset
+  return c;
 }
